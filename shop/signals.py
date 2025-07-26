@@ -16,4 +16,5 @@ def clear_category_cache(sender, **kwargs):
 @receiver(post_save, sender=Comment)
 def log_comment_created(sender, instance, created, **kwargs):
     if created:
-        print(f" Yangi comment: {instance.user.username} → {instance.product.title}")
+        # print(f" Yangi comment: {instance.user.username} → {instance.product.title}")
+         print(f"{instance.name} foydalanuvchi {instance.product.title} mahsulotga izoh qoldirdi.")
